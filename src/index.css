@@ -1,0 +1,598 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset !important; 
+  -webkit-text-fill-color: #ffffff !important;
+  font-size: 1rem !important;
+  font-family:  "Noto Serif", serif !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+*{
+    font-family: "Alice", serif;
+    overflow-x:hidden;
+}
+
+
+/* ------------------- */
+.outer-border {
+    position: relative;
+    border: none;
+    height:100%;
+    overflow: hidden;
+    padding:0;
+}
+
+.container {
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    border: none;
+    top: 100px;
+    left: 0; 
+    cursor: grab;
+}
+
+.container:active {
+    cursor: grabbing;
+}
+
+.border-handle {
+    position: absolute;
+    background: transparent;
+}
+
+/* Top border */
+.top { top: 0px; left: 0; width: 100%; height: 1px; cursor: ns-resize; background-color: rgb(255, 255, 255);}
+.top-active { top: 0px; left: 0; width: 100%; height: 1px; cursor: ns-resize; background-color: transparent;}
+
+/* Bottom border */
+.bottom { bottom: 0px; left: 0; width: 100%; height: 1px; cursor: ns-resize; background-color: rgb(255, 255, 255);}
+.bottom-active { bottom: 0px; left: 0; width: 100%; height: 1px; cursor: ns-resize; background-color: transparent;}
+
+/* Left border */
+.left { left: 0px; top: 0; height: 100%; width: 1px; cursor: ew-resize; background-color: rgb(255, 255, 255);}
+.left-active { left: 0px; top: 0; height: 100%; width: 1px; cursor: ew-resize; background-color: transparent;}
+
+/* Right border */
+.right { right: 0px; top: 0; height: 100%; width: 1px; cursor: ew-resize; background-color: rgb(255, 255, 255);}
+.right-active { right: 0px; top: 0; height: 100%; width: 1px; cursor: ew-resize; background-color: transparent;}
+
+.input--draggable--element{
+    /* width:100%;
+    height:100%; */
+    outline:none;
+    border:none;
+    color:white;
+    font-size: 2rem;
+    background-color: transparent;
+ }
+
+
+
+ .text-area--tag{
+       width:100%;
+       font-size:2rem;
+       outline:none;
+       border:none;
+       text-wrap: nowrap;
+ }
+
+.choose--tag--pic{
+    font-family: "Alice", italic;
+   
+}
+
+.menu--tag{
+    font-family: "Alice", italic;
+    font-style:italic;
+    color:white;
+
+
+}
+
+.font--profile--icon{
+     color:white;
+     font-size: 20px;;
+}
+
+.overlay--poppup--display{
+    border:none;
+    backdrop-filter: blur(20px);
+    position:fixed;
+    left:0;
+    right:0;
+    width:100%;
+    bottom:0;
+    z-index:1;
+    height:0;
+    margin:0;
+}
+.active{
+    transition:1s;
+    bottom:0;
+    width:100%;
+    height:100%;
+}
+.deactive{
+    transition:1s;
+    height:0;
+}
+
+/* 
+.register---display---tag:hover{
+    transition: 1s;
+    border:2px solid rgba(112, 124, 129, 0.345);
+} */
+
+
+@media only screen and (max-width : 600px){
+
+    
+    .overlay--display--register{
+        height:100%;
+        position:fixed;
+        z-index:1;
+        top:0;
+        left:0;
+        backdrop-filter: blur(20px);
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        right:0;
+        bottom:0;
+    }
+    
+    .register---display---tag{
+        width:96%; 
+        height:60%;
+        backdrop-filter: blur(15px);
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border:2px solid rgba(112, 124, 129, 0);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.611), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+    }
+
+    .input--element--outer--div--tag{
+       border:2px solid rgb(87, 87, 87);
+       padding:20px;
+    }
+    .input--element{ 
+    width:100%;
+   
+   
+    font-size: 1.2rem;
+    color:white;
+    outline:none;
+  
+    background-color: transparent;
+}
+.input--element--button{
+    width:20%;
+    margin-top:5%;
+    height:65px;
+    font-size: 1rem;
+    color:white;
+    outline:none;
+    cursor:pointer;
+    border:none;
+    border-radius:10px;
+    background-color: rgba(7, 7, 7, 0.479);
+}
+
+.input--element--button:hover{
+    transition: 1s;
+    
+    background-color: rgba(10, 10, 10, 0.786);
+}
+         
+
+}
+@media only screen and (max-width: 768px){
+
+    
+    .logo--tag, .choose--tag--pic{
+        font-size:16px;
+ }
+ 
+ 
+ 
+
+ /* .text--display{
+     opacity: 0;
+ } */
+ .overlay--poppup--display{
+     border:none;   
+     backdrop-filter: blur(20px);
+     position:fixed;
+     left:0;
+     right:0;
+     width:100%;
+     bottom:0;
+     z-index:1;
+     height:0;
+     top:10;
+ }
+ .active{
+     transition:1s;
+     bottom:0;
+     width:100%;
+     height:100%;
+ }
+ .deactive{
+     transition:1s;
+     height:0;
+ 
+}
+  .input--element--button{
+      width:40%;
+      height:60px;
+      font-size: 1rem;
+      color:white;
+      outline:none;
+      justify-content: center;
+      border-radius:10px;
+      background-color: rgba(60, 21, 199, 0.28);
+  }
+
+  .input--element--button:hover{
+      transition: 1s;
+      background-color: rgba(60, 21, 199, 0.497);
+  }
+
+  .overlay--display--register{
+    height:100%;
+    position:fixed;
+    z-index:1;
+    top:0;
+    left:0;
+    backdrop-filter: blur(20px);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    right:0;
+    bottom:0;
+}
+
+.register---display---tag{
+    width:96%; 
+    height:60%;
+    backdrop-filter: blur(15px);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border:2px solid rgba(112, 124, 129, 0);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.611), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+}
+  .input--element--outer--div--tag{
+    width:80%;
+     border:2px solid rgb(87, 87, 87);
+      padding:10px;
+}
+.input--element{ 
+    width:100%;
+    font-size: 1.2rem;
+    color:white;
+    outline:none;
+    background-color: transparent;
+}
+.input--element--button{
+    width:20%;
+    margin-top:5%;
+    height:65px;
+    font-size: 1rem;
+    color:white;
+    outline:none;
+    cursor:pointer;
+    border:none;
+    border-radius:10px;
+    background-color: rgba(7, 7, 7, 0.479);
+}
+
+.input--element--button:hover{
+    transition: 1s;
+    
+    background-color: rgba(10, 10, 10, 0.786);
+}
+}
+
+@media only screen and (min-width : 768px){
+
+    
+ 
+    .overlay--display--register{
+        height:100%;
+        position:fixed;
+        z-index:1;
+        top:0;
+        left:0;
+        backdrop-filter: blur(20px);
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        right:0;
+        bottom:0;
+    }
+    
+    .register---display---tag{
+        width:96%; 
+        height:60%;
+        backdrop-filter: blur(15px);
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border:2px solid rgba(112, 124, 129, 0);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.611), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+    }
+      
+ .input--element--outer--div--tag{
+  border:2px solid rgb(87, 87, 87);
+  padding:20px;
+}
+.input--element{ 
+    width:100%;
+   
+   
+    font-size: 1.2rem;
+    color:white;
+    outline:none;
+  
+    background-color: transparent;
+}
+.input--element--button{
+    width:20%;
+    margin-top:5%;
+    height:65px;
+    font-size: 1rem;
+    color:white;
+    outline:none;
+    cursor:pointer;
+    border:none;
+    border-radius:10px;
+    background-color: rgba(7, 7, 7, 0.479);
+}
+
+.input--element--button:hover{
+    transition: 1s;
+    
+    background-color: rgba(10, 10, 10, 0.786);
+}
+}
+
+@media only screen and (min-width : 992px){
+
+   
+    
+
+    .overlay--display--register{
+        height:100%;
+        position:fixed;
+        z-index:1;
+        top:0;
+        left:0;
+        backdrop-filter: blur(20px);
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        right:0;
+        bottom:0;
+    }
+    
+    .register---display---tag{
+        width:60%; 
+        height:80%;
+        backdrop-filter: blur(15px);
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border:2px solid rgba(112, 124, 129, 0);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.611), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+    }
+    .input--element--outer--div--tag{
+
+        width:50%;
+        border:2px solid rgb(87, 87, 87);
+         padding:20px;
+    } 
+
+    .input--element{ 
+        width:100%;
+       
+       
+        font-size: 1.2rem;
+        color:white;
+        outline:none;
+      
+        background-color: transparent;
+    }
+.input--element--button{
+    width:20%;
+    margin-top:5%;
+    height:65px;
+    font-size: 1rem;
+    color:white;
+    outline:none;
+    cursor:pointer;
+    border:none;
+    border-radius:10px;
+    background-color: rgba(7, 7, 7, 0.479);
+}
+
+.input--element--button:hover{
+    transition: 1s;
+    
+    background-color: rgba(10, 10, 10, 0.786);
+}
+
+
+.header--tag--register{
+    
+    font-size:3rem;
+ 
+ }
+ 
+
+ 
+ .header--tag--main--page{
+     font-size: 3.5rem;
+     font-weight: bolder;
+     font-family: "Noto Serif", serif;
+     background: radial-gradient(circle, #047bb6 2%, #047bb6 11%, #047bb6 10%);
+     color: transparent;
+     -webkit-background-clip: text;
+     background-clip: text;
+     -webkit-text-fill-color: transparent;
+ 
+ }
+ 
+ .divider--tag--main{
+    height:60%;
+    width:5px;
+    background: radial-gradient(circle, #047bb6 2%, #047bb6 11%, #047bb6 10%);
+
+
+}
+
+ 
+}
+@media only screen and ( min-width: 1220px){
+
+  
+    
+    .overlay--display--register{
+        height:100%;
+        position:fixed;
+        z-index:1;
+        top:0;
+        left:0;
+        backdrop-filter: blur(20px);
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        right:0;
+        bottom:0;
+    }
+    .divider--tag--main{
+        height:60%;
+        width:5px;
+        background: radial-gradient(circle, #047bb6 2%, #047bb6 11%, #047bb6 10%);
+    }
+    
+
+}
+
+@media only screen and ( min-width: 2000px){
+    .divider--tag--main{
+        height:60%;
+        width:5px;
+        background: radial-gradient(circle, #047bb6 2%, #047bb6 11%, #047bb6 10%);
+    }
+    
+}
+
+
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+ display: none;
+}
+
+
+
+html::-webkit-scrollbar {
+  width: 15px;
+
+}
+ 
+html::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0);
+  /* box-shadow: inset 0 0 6px rgba(48, 48, 52, 0.3); */
+}
+html::-webkit-scrollbar-thumb {
+  /* backdrop-filter: blur(13px); */
+  background: #434242;
+  border:none;
+  /* border-radius: 100px; */
+}
+
+html {
+  background-color: #02060a;
+  color: #f8fafc;
+ 
+}
+
+
+/* .authentication--services--tag{
+    position: absolute;
+} */
+.preview--image--tag{
+    position:absolute;
+    width:100%;
+    height:100%;
+    /* height:auto; */
+    top:0;
+    z-index:999;
+    left:0;
+    right:0;
+    backdrop-filter: blur(5px);
+    background-color: #02060a35;
+}
+/* .preview--image--tag--active{
+    position:fixed;
+    width:100%;
+    height:100vh;
+    /* height:auto; */
+    /* top:0;
+    z-index:999;
+    left:0;
+    right:0;
+    backdrop-filter: blur(5px);
+   background-color: #02060a35;
+} */ 
+
+.poppup--display--tag{
+       background-color: #02060a;
+       border-radius:10px;
+       
+}
+
+.container--each--menu--tag::-webkit-scrollbar {
+  width: 4px;
+  cursor: pointer;
+}
+ 
+.container--each--menu--tag::-webkit-scrollbar-track {
+  background: black;
+  cursor: pointer;
+  box-shadow: inset 0 0 6px rgba(48, 48, 52, 0.3);
+}
+
+.container--each--menu--tag::-webkit-scrollbar-thumb {
+  backdrop-filter: blur(13px);
+  background: #434242;
+  border:none;
+  cursor: pointer;
+  border-radius: 100px;
+}

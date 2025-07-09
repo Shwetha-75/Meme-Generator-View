@@ -1,0 +1,9 @@
+.meme---container---tag{
+    display:flex;
+    height:100%;
+    position:absolute;
+    background-color:red;
+    width:100%; 
+    top:0;
+    
+}

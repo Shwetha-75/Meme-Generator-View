@@ -1,0 +1,15 @@
+.download--tag--upload--image{
+     color:white;
+    border:2px solid #434242;
+    border-radius:10px;
+    font-size:1rem;
+    cursor: pointer;
+}
+
+.download--tag--upload--image:hover{
+    transition:0.9s;
+     color:rgb(255, 255, 255);
+     background-color: rgba(112, 128, 144, 0.278);
+
+     border : 2px solid #5b5b5b;
+}
