@@ -1,70 +1,91 @@
-# Getting Started with Create React App
+<svg fill="none" viewBox="0 0 600 300" width="600" height="300" xmlns="http://www.w3.org/2000/svg">
+  <foreignObject x="0" y="0" width="600" height="300"> 
+  <div xmlns="http://www.w3.org/1999/xhtml">
+      <h1  align="center" >Meme Generator</h1>
+    </div>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
+<div>
+  <h3>Table Of Contents</h3>
+  <ol>
+     <li>Project Overview</li>
+    <li>Architecture</li>
+    <li>Tech Stack</li>
+    <li>Guidelines to deploy on local</li>
+    <li>Conclusion</li>
+  </ol>
+</div>
 
-## Available Scripts
+  ---
+<div>
+    <h3 font="bold">1. Project Overview </h3>
+    <br>
+    <p>
+      Full-stack web application that allows users to generate, customize, and share memes dynamically. Built using React, Flask, and Supabase, the app lets users browse meme templates, edit text directly on images, and download or share the final meme. The system also supports user authentication and image-based editing functionalities. A tightly coupled architecture ensures quick interaction between frontend and backend while maintaining modular components for scalability.
+    </p>
+</div>
 
-In the project directory, you can run:
+---
 
-### `npm start`
+<div>
+  <h3>2. Architecture</h3>
+ <img src="https://github.com/Shwetha-75/image/blob/f9949fa3f5817a93c14410affc30045fc3376830/meme-ppt.png?raw=true"/>
+</div>
+<div>
+</div>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+  <h3>3. Tech Stack</h3>
+  
+  |Phase | Tech |
+  |------- |------|
+  |Frontend| Reactjs |
+  |Backend | Node js, OAuth SignIn |
+  |Databse |Supabase |
+  |Testing | jest, postman |
+  |Deloyement | render, vercel|
 
-### `npm test`
+  ---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  <div>
+    <h3>6. Guidelines to deploy on local </h3>
+  </div>
+   <p>Clone the repository</p>
+   
+   ~~~
+    git clone https://github.com/Shwetha-75/Budget-Tracker-View.git](https://github.com/Shwetha-75/meme-web-app.git
+   ~~~
 
-### `npm run build`
+   <p>For view install lastest version & integrate it with vite (Optional : you can use any flavours of js and frameworks)</p>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   ~~~
+     npm create vite@latest
+   ~~~
+   <p>Install node modules</p>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ~~~
+    npm i
+   ~~~
+   <p>For Backend services install node js</p>
+   
+   ~~~
+    npm init
+   ~~~
+   ~~~
+    npm i express cors nodemon 
+   ~~~
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+  ---
+  
+  <h3>Conclusion</h3>
+  <div>
+    <ul>
+      <li>Contributors : Shwetha K (Design, Develeopment, Deployment)</li>
+      <li>**Note : No fixed timeline, the project is under development.</li>
+    </ul>
+  </div>
+  <p>"Woohoo!" 🎉 you have completed the installation, now you can work on the project to implement your own ideas</p>
+ </div>
+  </foreignObject>
+</svg>
